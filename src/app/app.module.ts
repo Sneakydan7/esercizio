@@ -11,6 +11,7 @@ import { PostCardComponent } from './components/post-card/post-card.component';
 import { DetailsComponent } from './components/details/details.component';
 import { UsersComponent } from './components/users/users.component';
 import { UsersinfoComponent } from './components/usersinfo/usersinfo.component';
+import { UppercasePipe } from './components/uppercase.pipe';
 
 const routes: Route[] = [
     {
@@ -56,6 +57,7 @@ const routes: Route[] = [
         DetailsComponent,
         UsersComponent,
         UsersinfoComponent,
+        UppercasePipe,
     ],
     imports: [BrowserModule, RouterModule.forRoot(routes)],
     providers: [],
