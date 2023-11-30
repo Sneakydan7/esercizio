@@ -39,7 +39,7 @@ const routes: Route[] = [
         component: UsersComponent,
         children: [
             {
-                path: 'usersinfo',
+                path: ':id',
                 component: UsersinfoComponent,
             },
         ],

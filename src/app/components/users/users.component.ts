@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from 'src/app/models/post';
-import { PostsService } from 'src/app/service/posts.service';
-
+import { User } from 'src/app/models/user';
+import { UsersService } from 'src/app/service/user.service';
 @Component({
     selector: 'app-users',
     templateUrl: './users.component.html',
     styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
-    posts!: Post[];
+    users!: User[];
 
-    constructor(private postSrv: PostsService) {}
+    constructor(private srv: UsersService) {}
 
     async ngOnInit() {
-        const posts = await this.postSrv.recuperaPosts();
-        this.posts = posts;
+        const users = await this.srv.recuperaUtenti();
+        this.users = users;
     }
 }

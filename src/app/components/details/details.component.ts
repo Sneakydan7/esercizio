@@ -19,7 +19,6 @@ export class DetailsComponent implements OnInit {
     ngOnInit() {
         this.subscribe = this.route.params.subscribe((param) => {
             const id = +param['id'];
-            console.log(id);
             this.post = this.srv.recuperaPost(id);
         });
     }
